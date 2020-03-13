@@ -1,0 +1,58 @@
+Interview introduction:
+I have around 3 + years of experience in Both Devops and Cloud infrastructure.
+# I started my career as Linux Engineer and moved to Release management team which is about production releases.
+# I was part of all production releases and providing on demand solutions for Deployment failures and so on.
+# Later I moved to technology expert/Engineering team which migrate/introduce new technologies in the place of traditional technologies.
+# Since then I got a chance to work for projects to create the infrastructure from scratch which helped me understand and explore multiple technologies .
+
+I will mention some of the technologies worked in my project.
+Technologies i worked in my projects. 
+* GIT as a Version Control system
+* Jenkins as CI (Continuous integration tool) (Sonarqube as a code scanner)
+* Ansible as a (CM (Configuration managment tool) Also Ansible as a CD(Contuinuous deployment tool)
+* Linux servers
+* Splunk as a Log monotoring tool
+* Much comfortable to write shell scripts and Ansible playbooks.
+
+worked as server level support also in addition of devops
+
+* Creating LVMS 
+
+(logical volume management which includes allocating disks, striping, mirroring and resizing logical volumes.) 
+
+* Increasing Spaces.
+
+worked on couple of modules in ansible like
+
+ssh keys sharing
+copy
+certs exchanges
+
+I have exp. In Rollbacks, Hotfixes , deployment failures , on demand solutions.
+
+-- -- -- -- --
+
+will explain highlevel of architecture with coodrination technologies.(process flow) 
+
+we usually create a GIT release branches and give access to the developers to commit and merge the code...once the code is freezed we will protect the release the branch.
+
+Quesiton: How to protect the branch.
+once the code is committed to master our jenkins pipeline trigger and then it will pull the dependencies from artifactory which is already configured once the code build using maven it releases the jar/war/ear to the repository (Which is CI)
+
+We have wrote a playbook in such a way whenever new jar/war/ear placed in artifactory, my playbook will detect and copy it using the module copy..
+it will deploy into the machines which i have put in my inventory file.
+for example my inventory file is having 30 servers ...jars will be deployed into 30 servers (Which is CD)
+once the deployment is done we will monitor the logs in to splunk.
+
+we have 3 months release cycle in my organization for every 3 months have a production release which is taken care by me.
+
+
+
+CCTC 4.8 ECTC 6 LPA
+Notice Period: 30 Day
+
+reason to relocation: Basically I am from HYD. My family also settled in hyd, I am desperately looking for Hyderabad location. 
+
+
+
+
