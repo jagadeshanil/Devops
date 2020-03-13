@@ -1,0 +1,129 @@
+GIT QUESTIONS:
+1. What is Source Code Management?
+Where we can store and manage the code. Different can store code simultaneously. It saves all the changes separtely.
+
+2. What are the Advantages of Source Code Management?
+. Helps in acheving in teamwork.
+. We can work on different features simultaneously.
+. Different people from same team or different people from different team store the data simultaneously.
+
+3. Available SCM tools in the market?
+Git ,SVN, clear case.
+
+4. What is Git?
+Git is one of scm, we can store any type of code. Git is also called as version control system. It will store every update as a new version. Every version has a unique number that we call commit. If you want to go back to any version we can go using commit id.
+
+5. What are the advantages of Git?
+Speed
+Parallel balancing
+Fully distributed.
+
+6.What are the stages in Git?
+Working directory:
+Where we can create files physically and modify. we work in this work space.
+
+Staging area:
+Git takes snapshot of every version. We can't see this area bcz it is a virtual area.
+
+Local repository:
+Git stores all the commits locally  in this repository. And it is a hidden directory we can't delete it accidentally also. For every commit it has a unique I'd.
+
+Remote repository (central):
+Git stores all the commits centraly in this repository.It is one of the central repositories for storing code and sharing to other teams also.
+
+7. What is the common branching strategy in Git?
+.  We will use one repository for different features.
+. For every feature we are using separate branch.
+.  Finally we will merge all the (codes) branches .
+. For parallel development.
+
+8. How many types of repositories available in Git?
+Local and central repository.
+All local users can modify the files in local repository.
+Central repository is used only for storing and  sharing the codes.
+
+9. What do you mean by “Snapshot” in Git?
+Snapshot is backup for each versions of a code.
+Snapshot will be taking in staging area which in between working and local area.
+
+10. What is Git merge?
+Git merge is nothing but if we have mutiples branches with multiple files and we need all the files in one branch we will use merge for this purpose.
+After merging all the codes into master branch we will push codes into remote repository.
+Same times we will get merge conflict while merging same file from different branches having different code. We will resolve this manually by updating the code.
+
+11. What is Git stash?.
+Git is stash is temporary area to store temporary files.
+When we are working on different features in same Branch we use stash.Stash is temporary are to store and bring back the data whenever we want to continue . When u added the files to staging and u don't want to commit those files now, we will stores those files in stash area, after save these in stash the worikg directory will show clean.
+We can remove stash area after competing our work.
+
+To save files in stash area:
+Git stash save <"message">
+
+How to see stash list:
+Git stash list
+It will create id
+Stash@{0}: <branch>   <message>
+
+To get back the data from stash to branch:
+Here we have 2 types that is copy paste & cut paste.
+Apply will work as copy paste & pop will work as cut paste.
+Git stash apply <stash#>
+Git stash pop <stash#>
+
+We can remove stash by using:
+Git stash drop <stash#>  to delete particular.
+Git stash clear <stash#> to delete complete stash area.
+
+12. What is Git reset?
+Git Reset command is used to remove changes form staging area. This will
+bringing back file form staging area to work directory.
+To erase we will use reset:
+Git reset --soft <commit id>
+Git reset --mixed <commit id>
+Git reset --hard <commit id>
+
+If we use soft it will remove from local repo only. If we use mixed it will remove from local and staging are.
+If we use hard it will remove from all the 3 areas.
+
+13. Difference between Git pull and Git clone?
+For the first time if we want to get the data from central repository to our local area we use git clone.
+Git pull is used to get only changes in central repository.
+
+14. Difference between Git pull and Git fetch?
+Git pull= git fetch+ git merge.
+We use git pull to get changes from central repository. If any changes are there automatically the same files will be merged.
+If we use git fetch we will get the changes made in central repo to local repo but changes won't merged into local repo.
+
+15. What is the difference between Git merge and rebase?
+Both are almost same but few differences. When you run Git merge, one new merge
+commit will be generated which is having the history of both development
+branches. It preserves the history of both branches.
+If we ise Git rebase, commits in new branch will be applied on top of base branch tip.
+There won’t be any merge commit here. It wont show the history of new branch.
+
+16. What is git bisect?
+Git bisect allows us to find a bad commit out of good commits.
+We don’t have to trace down the bad commit by hand; git-bisect will do that for us.
+
+17.What is Git cherry-pick?
+When we go with git merge, all commits which are there in new branch will be merged into current branch.
+But sometimes, requirement will be ,we want to get only one commit form new branch instead of merging all commits. In this case we go with git cherry-pick.
+Git cherry-pick will pick only one commit whatever we select and merges with commits which are there in current branch. So picking particular commit and merging into current branch we call git cherry-pick.
+
+18. What is the difference between Git and SVN?
+SVN:
+. Svn is centralized version control system.
+. It will store backup only in central repo.
+. No branching system in svn.
+. No parallel development.
+. No local repo also, every we time after changing or writing the code immediately we need to push the code to central repo to save the changes.
+.  Can't save anything locally.
+Git:
+. Git is distributed version control system.
+. Backup copy is available in every machine local repo and Central repo.
+. We can create any number of branches. we can go Parallel development simultaneously.
+. For evry git repository it has local repo as well.We save changes locally. After end of the work we can push the code to central repo.
+
+19. What is the commit message in git?
+Git commit msg is nothing but for every commit we will give a message to identify the commit.
+For every commit we will have a 40 long alphanumeric id.
